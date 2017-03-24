@@ -10,7 +10,7 @@ To write something to a file you can use following code:
 
 """
 
-
+"""
 meerkat_file = open('meerkats.txt', 'r')
 
 for line in meerkat_file:
@@ -18,5 +18,32 @@ for line in meerkat_file:
     for word in words:
         print(word)
     print(line)
+	
 
-meerkat_file.close()
+file = open('meerkats.txt','r')
+ 
+phrasemax=""
+maxi=0
+ 
+texte=file.read()
+ 
+ligne=""
+for caractere in texte:
+    ligne+=caractere
+    if caractere in ['.','!','?','\n']:
+        if len(ligne.lstrip(' ')) > maxi:
+            phrasemax=ligne.lstrip(' ')
+        ligne=""
+ 
+file.close()
+print("La phrase la plus longue: " + phrasemax)
+"""
+meerkat = open('meerkats.txt', 'r')
+Ligne_derniere = ""
+for ligne in meerkat:
+ Ligne_derniere = ligne
+print(Ligne_derniere)
+meerkat.close()
+f = open('last_meerkat.txt' , 'w')
+f.write(Ligne_derniere + '\n')
+f.close()
