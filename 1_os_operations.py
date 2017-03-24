@@ -14,7 +14,7 @@ Exercises:
 import os #library for doing stuff related to the operatin system
 
 #Greeting
-print("THIS IS A NEW GREETING")
+print("FOR EXEMPLE")
 print("It executes program line-by-line")
 
 currentDirectory = os.getcwd() #same as `dir` in windows and `pwd` in linux
