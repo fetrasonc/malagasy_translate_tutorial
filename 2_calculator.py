@@ -16,21 +16,37 @@ def add_two_numbers(x,y):
 def subtract_two_numbers(x,y):
     """ subtract two numbers """
     return int(x) - int(y)
+def multiplication_two_numbers(x,y):
+    """ subtract two numbers """
+    return int(x) * int(y)
+
 
 #Greeting
 print("Hello! This is a simple program for simple calculations")
-
 #Specify operation
 print("What would you like to do today?")
 doToday = "add" #HACK
-print("We will " + doToday + " two numbers now.")
 
+print("We will " + doToday + " two numbers now.")
 var1 = input("First number: ")
 var2 = input("Second number: ")
-
 if doToday=="add":
     result = add_two_numbers(var1, var2)
-
 print("This is the result:", result)
+doToday = "subtract" #HACK
+print("We will " + doToday + " two numbers now.")
+var1 = input("First number: ")
+var2 = input("Second number: ")
+if doToday=="subtract":
+    result = subtract_two_numbers(var1, var2)
+print("This is the result:", result)
+doToday = "multiplication" #HACK
+print("We will " + doToday + " two numbers now.")
+var1 = input("First number: ")
+var2 = input("Second number: ")
+if doToday=="multiplication":
+    result = multiplication_two_numbers(var1, var2)
+print("This is the result:", result)
+
 print("I hope it is correct...")
 print("Bye, now!")
